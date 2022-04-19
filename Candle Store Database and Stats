@@ -1,0 +1,21 @@
+CREATE table 'candles' (id INTEGER PRIMARY KEY, name TEXT, smell TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO 'candles' VALUES (1, "spring", "daisies", 10, 5);
+INSERT INTO 'candles' VALUES (2, "summer", "firework", 18, 7);
+INSERT INTO 'candles' VALUES (3, "fall", "campfire", 4, 5);
+INSERT INTO 'candles' VALUES (4, "winter", "mistletoe", 12, 7);
+INSERT INTO 'candles' VALUES (5, "moon", "lilies", 6, 10);
+INSERT INTO 'candles' VALUES (6, "sun", "wheat field", 19, 10);
+INSERT INTO 'candles' VALUES (7, "ocean", "seagrass", 7, 5);
+INSERT INTO 'candles' VALUES (8, "stars", "stardust", 8, 10);
+INSERT INTO 'candles' VALUES (9, "comet", "honey", 3, 35);
+INSERT INTO 'candles' VALUES (10, "mountain", "blackberry", 15, 10);
+INSERT INTO 'candles' VALUES (11, "thunder", "rain", 7, 5);
+INSERT INTO 'candles' VALUES (12, "rainbow", "lucky charms", 6, 10);
+INSERT INTO 'candles' VALUES (13, "halloween", "pumpkin", 10, 5);
+INSERT INTO 'candles' VALUES (14, "birthday", "cake", 20, 10);
+INSERT INTO 'candles' VALUES (15, "italian", "cannoli", 29, 10);
+
+SELECT * FROM 'candles' WHERE price ORDER BY price;
+SELECT * FROM 'candles' WHERE quantity ORDER BY quantity;
+SELECT SUM (quantity) FROM 'candles';
+SELECT SUM (price) FROM 'candles';
