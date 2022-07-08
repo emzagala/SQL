@@ -15,7 +15,16 @@ INSERT INTO 'candles' VALUES (13, "halloween", "pumpkin", 10, 5);
 INSERT INTO 'candles' VALUES (14, "birthday", "cake", 20, 10);
 INSERT INTO 'candles' VALUES (15, "italian", "cannoli", 29, 10);
 
-SELECT * FROM 'candles' WHERE price ORDER BY price;
-SELECT * FROM 'candles' WHERE quantity ORDER BY quantity;
-SELECT SUM (quantity) FROM 'candles';
-SELECT SUM (price) FROM 'candles';
+SELECT * FROM 'candles' 
+WHERE price > 5 
+ORDER BY price;
+
+SELECT * FROM 'candles' 
+WHERE quantity <= 7
+ORDER BY quantity;
+
+SELECT SUM (quantity) 
+FROM 'candles';
+
+SELECT SUM (price) 
+FROM 'candles';
