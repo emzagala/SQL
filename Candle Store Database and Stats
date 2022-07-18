@@ -1,3 +1,5 @@
+In this SQL code I'm creating a candle store database and querying its data.
+
 CREATE table 'candles' (id INTEGER PRIMARY KEY, name TEXT, smell TEXT, quantity INTEGER, price INTEGER);
 INSERT INTO 'candles' VALUES (1, "spring", "daisies", 10, 5);
 INSERT INTO 'candles' VALUES (2, "summer", "firework", 18, 7);
