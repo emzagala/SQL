@@ -25,8 +25,8 @@ SELECT * FROM 'candles'
 WHERE quantity <= 7
 ORDER BY quantity;
 
-SELECT SUM (quantity) 
+SELECT SUM(quantity) 
 FROM 'candles';
 
-SELECT SUM (price) 
+SELECT SUM(price) 
 FROM 'candles';
