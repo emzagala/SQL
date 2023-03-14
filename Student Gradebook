@@ -1,6 +1,6 @@
 In this SQL code, I'm querying data from a student grades database.
 
-SELECT name, number_grade, ROUND (fraction_completed*100) AS percent_completed 
+SELECT name, number_grade, ROUND(fraction_completed*100) AS percent_completed 
 FROM student_grades;
 
 SELECT COUNT(*),
