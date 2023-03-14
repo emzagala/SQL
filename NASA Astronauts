@@ -1,6 +1,6 @@
 In this SQL code, I'm querying NASA astronauts data.
 
-SELECT COUNT(Space_Walks) AS Women_on_the_moon 
+SELECT COUNT(Space_Walks) AS Women_in_space
 FROM astronauts 
 WHERE Gender = 'Female';
 
