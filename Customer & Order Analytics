@@ -80,3 +80,12 @@ JOIN BIT_DB.customers cust
 ON feb.orderID = cust.order_id
 AND length(orderid) = 6 
 AND orderid <> 'Order ID';
+
+#12. What was the average quantity of products purchased per account in February?
+
+SELECT SUM(quantity)/count(cust.acctnum)
+FROM BIT_DB.FebSales feb
+LEFT JOIN BIT_DB.customers cust
+ON feb.orderID = cust.order_id
+AND length(orderid) = 6 
+AND orderid <> 'Order ID';
