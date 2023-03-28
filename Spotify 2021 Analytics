@@ -1,0 +1,9 @@
+In this SQL, I'm querying data from Spotify's top 50 songs in 2021.
+
+#1. Who are the top 10 artists based on popularity?
+
+SELECT artist_name, MAX(popularity)
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name
+ORDER BY MAX(popularity) DESC
+LIMIT 10;
