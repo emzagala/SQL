@@ -1,4 +1,7 @@
-#1. Find the average safety rating for all bike lanes in the city, then show the lanes that have an average safety rating of 4.0 or higher, and add a label that says "Safe Lane".
+In this SQL code, I'm using a Common Table Expression (CTE) and a Windows function to query city bike lane data.
+
+#1. Find the average safety rating for all bike lanes in the city, 
+then show the lanes that have an average safety rating of 4.0 or higher, and add a label that says "Safe Lane".
 
 WITH safety_average_cte AS (
 SELECT street, AVG(safetyrating) AS 'rating'
@@ -8,3 +11,19 @@ GROUP BY street
 SELECT street, rating, 'Safe Lane' AS label
 FROM safety_average_cte
 WHERE rating >= 4;
+
+#2. List of all the bike lanes, both safety ratings for each lane given by the two technicians, 
+the average safety rating for each lane, and a label with the following recommendations:
+
+- Label lanes with an average safety rating of 4 or more as "Leave As-Is".
+- Label lanes with an average safety rating of less than 2.5 as "Remove".
+- All other lanes should be labeled as "Improvements Needed".
+
+SELECT street, safetyrating,
+AVG(safetyrating) OVER (PARTITION BY street) AS "Average_safety_rating_",
+CASE
+    WHEN AVG(safetyrating) OVER (PARTITION BY street) >= 4 THEN "Leave-As-Is"
+    WHEN AVG(safetyrating) OVER (PARTITION BY street) < 2.5 THEN "Remove"
+    ELSE "Improvements Needed"
+END AS "Recommendation"
+FROM CityBikeLanes;
