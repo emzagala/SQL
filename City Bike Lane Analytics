@@ -1,7 +1,7 @@
 In this SQL code, I'm using a Common Table Expression (CTE) and a Windows function to query city bike lane data.
 
-#1. Find the average safety rating for all bike lanes in the city, 
-then show the lanes that have an average safety rating of 4.0 or higher, and add a label that says "Safe Lane".
+#1. Find the average safety rating for all bike lanes in the city, then show the lanes that 
+have an average safety rating of 4.0 or higher, and add a label that says "Safe Lane".
 
 WITH safety_average_cte AS (
 SELECT street, AVG(safetyrating) AS 'rating'
